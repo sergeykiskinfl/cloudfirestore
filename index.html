@@ -1,0 +1,51 @@
+<?!= HtmlService.createHtmlOutputFromFile('styles.css').getContent(); ?>
+   <form id="form1">
+    <div class="content">
+            <div class="border-black">
+            <div id="category-container" class="block alignbeauty multiselect">
+                <div id="category-select" class="selectBox">
+                    <select>
+                    <option>Select a category</option>
+                    </select>
+                    <div class="overSelect"></div>
+                </div>
+                <div id="category-checkboxes" class="checkboxes">
+                </div>
+            </div>
+            
+            <div id="vendor-container" class="block alignbeauty multiselect">
+                <div id="vendor-select" class="selectBox">
+                    <select>
+                    <option>Select a vendor</option>
+                    </select>
+                    <div class="overSelect"></div>
+                </div>
+                <div id="vendor-checkboxes" class="checkboxes">
+                </div>
+            </div>
+
+            <div class="block alignbeauty">
+                <label for="price-min">Price min</label>
+                <input id="price-min" type="text">
+                </div> 
+            <div class="block alignbeauty">
+                <label for="price-max">Price max</label>
+                <input id="price-max" type="text">
+            </div>
+            
+            </div>
+                
+            <div class="top_bar">
+            <input id="loadbutton" type="button" value="Load">
+            <input type="submit" value="Unload">
+            </div>
+            
+            <div class="block">
+            <div id="message" class="message top_bar"></div>
+            </div>
+
+        </div>
+    <form>
+
+<?!= requireJs(['main']); ?>
+<?!= requireGs(['App','Client','Render']); ?>
